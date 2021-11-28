@@ -1,8 +1,32 @@
 import React from "react";
 import styled, {keyframes, ThemeProvider} from "styled-components";
-import  BGD from '../images/bg03.jpg'
+import  BGD from '../images/bg2.jpg'
 import  BGL from '../images/bg01.jpg'
 
+const fadein = keyframes` 
+  0% { height: 0vh; width: 25%; opacity: 0.1 }
+  100% { height: 92vh; width: 100%; opacity: 1 }
+ `
+
+ export const T1 =styled.div`
+  color:rgba(0,0,0,0.5);
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 10%;
+ `
+  export const T2 =styled.div`
+  color:rgba(0,0,0,0.5);
+  font-size: 2rem;
+  text-align: center;
+  
+ `
+export const SideBar =styled.div`
+  width: 20vw;
+`;
+
+export const Content =styled.div`
+width: 80vw;
+`;
 
 
 export const Titulo = styled.h1`
@@ -13,23 +37,29 @@ export const Titulo = styled.h1`
 `;
 
 export const SbBg = styled.div`
+  animation: ${fadein} 1s  ;
   background-image: url(${BGD});
   background-size: cover;
   width: 100%;
-  height: 92vh;
+  height: 90vh;
   margin-top: 21%;
   border-radius: 0px 20px 20px 0px;
-  
 `;
 
 
-export const Cristal=styled.div` 
-  background-color: rgba(255,255,255,0.6);
+export const Cristal=styled.div`  
+  background-color: rgba(255,255,255,0.4);
   width: 100%;
   height: 92vh;
   backdrop-filter: blur(1px);
+  padding:5%;
 
 `;
+
+//animation-name: breath-animation;
+// animation-duration: 8s;
+//   animation-iteration-count: infinite;
+
 
 
 const Container = styled.div`
@@ -41,7 +71,7 @@ const Container = styled.div`
 
 const Heading = styled.h1`
   font-size: ${({ isHeading, theme: { fontSizes } }) =>
-    isHeading ? fontSizes.large : fontSizes.small};
+  isHeading ? fontSizes.large : fontSizes.small};
   color: ${({ theme: { colors } }) => colors.persianGreen};
 `;
 
@@ -51,6 +81,7 @@ const theme = {
     persianGreen: "#06B49A",
     lightBlue: "#AFDBD2",
     onyx: "#36313D"
+  
   },
 
   fonts: ["sans-serif", "Roboto"],

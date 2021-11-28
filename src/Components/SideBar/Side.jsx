@@ -2,15 +2,21 @@ import React,{useContext} from "react";
 import { DataContext } from "../../Context";
 import { MDBIcon } from 'mdb-react-ui-kit';
 import {SbBg, Cristal, Titulo} from '../../Styles/GlobalStyles'
-export const Side=()=>{
+import { ItemSb } from "../Items/SideBarItem";
 
-    const theme = useContext(DataContext);
+
+export const Side=()=>{
+    const ctxt = useContext(DataContext);
+
+    const handleClick=()=>{
+        ctxt.changeSideB()
+    }
 
     return(
         <SbBg>
             <Cristal>
-            <MDBIcon fas icon="bars" />
-
+            <h1 onClick={()=>handleClick()}><MDBIcon fas icon="bars"  /></h1>
+                <ItemSb name={"DashBoard"} />
                 <Titulo>dasdas</Titulo>
             </Cristal>
         </SbBg>

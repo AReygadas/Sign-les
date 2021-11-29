@@ -8,6 +8,18 @@ const fadein = keyframes`
   100% { height: 92vh; width: 100%; opacity: 1 }
  `
 
+const rotateAnimation =keyframes`
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(360deg);}
+`
+
+export const Logot=styled.img`
+   width: 100px;
+   height: auto;
+   z-index: 100;
+   animation: ${rotateAnimation} 3s linear infinite;
+`;
+
  export const T1 =styled.div`
   color:rgba(0,0,0,0.5);
   font-size: 3rem;
@@ -55,7 +67,32 @@ export const Cristal=styled.div`
   padding:5%;
 
 `;
-
+export const COnt=styled.div`
+  position: relative;
+  display: flex;
+`
+export const Lg = styled.div`
+ background-color:rgba(76,122,100,1);
+ width: 25vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ float: left;
+`
+export const Dsp = styled.div`
+ background: transparent;
+  width: 75vw;
+  height: 100vh;
+  display: block;
+  align-items: center;
+  float: right;
+`
+export const Vid = styled.video`
+  position: fixed;
+  height:100vh;
+  width: auto;
+  z-index: -10;
+`
 //animation-name: breath-animation;
 // animation-duration: 8s;
 //   animation-iteration-count: infinite;
@@ -75,6 +112,8 @@ const Heading = styled.h1`
   color: ${({ theme: { colors } }) => colors.persianGreen};
 `;
 
+
+
 const theme = {
   colors: {
     powderWhite: "#FFFDF9",
@@ -91,6 +130,8 @@ const theme = {
     large: "3em"
   }
 };
+
+
 
 const Theme = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>

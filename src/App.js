@@ -1,25 +1,42 @@
-import React from "react";
+import React, {useContext} from "react";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import LayOut from "./Layout/LayOut";
 import { DashBoard } from "./Pages/DashBoard";
 import { Home } from './Pages/Home';
-
+import { Index } from "./Pages/Index";
+import {DataContext} from './Context'
 
 function App() {
+
+  const context = useContext(DataContext)
+
   return (
     <>
     <BrowserRouter>
-      <LayOut>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/Dash" element={<DashBoard />} />
+       {context.Auth 
+       ?
+       <LayOut>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Dash" element={<DashBoard />} />
+          {/* <Route path="teams" element={<Teams />}>
+           <Route path=":teamId" element={<Team />} />
+           <Route path="new" element={<NewTeamForm />} />
+           <Route index element={<LeagueStandings />} />
+          </Route> */}
+        </Routes>       
+       </LayOut>
+       :       
+        <Routes>
+        <Route exact path="/" element={<Index />} />
         {/* <Route path="teams" element={<Teams />}>
           <Route path=":teamId" element={<Team />} />
           <Route path="new" element={<NewTeamForm />} />
           <Route index element={<LeagueStandings />} />
         </Route> */}
-      </Routes>
-      </LayOut>
+      </Routes>   
+       
+       } 
     </BrowserRouter>
     </>
   );

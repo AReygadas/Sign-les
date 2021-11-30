@@ -14,10 +14,19 @@ const rotateAnimation =keyframes`
 `
 
 export const Logot=styled.img`
-   width: 100px;
+   width: 200px;
    height: auto;
    z-index: 100;
-   animation: ${rotateAnimation} 3s linear infinite;
+   animation: ${rotateAnimation} 5s linear infinite;
+`;
+
+export const C1=styled.div`
+  margin-top: 15%;
+  margin-left: 33%;
+
+`
+export const LabelSign=styled.div`
+    font-size: 4rem;
 `;
 
  export const T1 =styled.div`
@@ -72,12 +81,14 @@ export const COnt=styled.div`
   display: flex;
 `
 export const Lg = styled.div`
- background-color:rgba(76,122,100,1);
- width: 25vw;
- height: 100vh;
- display: flex;
- align-items: center;
- float: left;
+  background-color:rgba(0,0,0,0.8);
+  width: 25vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  float: left;
+  box-shadow: 10px 10px 10px 10px;
+
 `
 export const Dsp = styled.div`
  background: transparent;

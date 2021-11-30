@@ -5,7 +5,7 @@ export const DataContext = createContext();
 export const DataProvider =({ children })=>{
     const [SideB, setSideB]=useState(false);
     const [theme, setTheme]=useState("Ligth");
-    const [Auth, setAuth] =useState(true);
+    const [Auth, setAuth] =useState(false);
 
     const vars = {
         Auth,

@@ -3,10 +3,12 @@ import { Card, Icon, Texto } from "./Styles";
 
 export const CardItem=(props)=>{
 
-    return(
+    return( 
+        
         <Card>
             <Icon />
             <Texto>props.txt</Texto>
         </Card>
+
     )
 }

@@ -6,7 +6,7 @@ export const Home=()=>{
     return(
     <>
         <T1>Sign Less</T1>
-        <T2>aplication</T2>
+        <T2>Web App</T2>
 <MDBRow>
     <MDBCol size="3">
 

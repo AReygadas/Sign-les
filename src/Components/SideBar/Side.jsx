@@ -15,9 +15,11 @@ export const Side=()=>{
     return(
         <SbBg>
             <Cristal>
-            <h1 onClick={()=>handleClick()}><MDBIcon fas icon="bars"  /></h1>
+                <h3 onClick={()=>handleClick()}><MDBIcon fas icon="bars" /></h3>
                 <ItemSb name={"DashBoard"} />
-                <Titulo>dasdas</Titulo>
+                <ItemSb name={"My FIles"} />
+                <ItemSb name={"Sign Doc"} />
+                <ItemSb name={"Settings"} />
             </Cristal>
         </SbBg>
     )

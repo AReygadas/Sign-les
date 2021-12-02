@@ -5,21 +5,21 @@ import {Lg,Dsp,Vid,Logot, C1, LabelSign} from '../Styles/GlobalStyles'
 import Log from '../images/Logo.png'
 export const Index =()=>{
 
-    return(
-        <>
-            <Lg>
-                <SignIn />
-            </Lg>
-            <Dsp>
-                <Vid loop autoPlay muted>
-                    <source src='https://mdbootstrap.com/img/video/Lines.mp4' type="video/mp4" />
-                </Vid>
-                <C1>
-                <Logot src={Log} />
-                <LabelSign>Sign-les</LabelSign>
-                
-                </C1>
-            </Dsp>
-        </>
-    )
+return(
+    <>
+        <Lg>
+            <SignIn />
+        </Lg>
+        <Dsp>
+            <Vid loop autoPlay muted>
+                <source src='https://mdbootstrap.com/img/video/Lines.mp4' type="video/mp4" />
+            </Vid>
+            <C1>
+            <Logot src={Log} />
+            <LabelSign>Sign-les</LabelSign>
+            
+            </C1>
+        </Dsp>
+    </>
+)
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import { Card, Icon, Texto } from "./Styles";
+import { Card, Val, Txt,Barra } from "./Styles";
 
 export const CardItem=(props)=>{
 
     return( 
         
-        <Card>
-            <Icon />
-            <Texto>props.txt</Texto>
+        <Card >
+            <Val col={props.color}>{props.val}%</Val>
+            <Txt>{props.text}</Txt>           
+            <Barra col={props.color} por={props.val}></Barra>
         </Card>
-
     )
 }
